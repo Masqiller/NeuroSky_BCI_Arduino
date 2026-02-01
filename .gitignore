@@ -1,0 +1,57 @@
+# Build outputs
+bin/
+obj/
+Build/
+Release/
+Debug/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Arduino
+*.elf
+*.hex
+*.eep
+
+# Logs
+*.log
+log.txt
+
+# Temporary files
+*.tmp
+*.temp
+*~
