@@ -94,6 +94,15 @@ MindControlExamples/
 │   ├── CH341SER_MW.INF
 │   ├── SETUP.EXE                       # Driver installer
 │   └── DRVSETUP64/                     # 64-bit driver setup
+├── Neurosky_Arduino/                   # PlatformIO Arduino Project
+│   ├── platformio.ini                  # PlatformIO configuration
+│   ├── src/
+│   │   └── main.cpp                    # Main LED control code
+│   ├── lib/
+│   │   └── Servo/                      # Servo library (multi-arch)
+│   └── test/
+│       ├── Led_control.cpp             # LED control test
+│       └── servo.cpp                   # Servo control test
 ├── ThinkGearConnector/                 # Neurosky ThinkGear Connector
 │   ├── win32/                          # Windows executable
 │   │   └── ThinkGear Connector.exe     # Run this for headset connection
@@ -145,11 +154,30 @@ MindControlExamples/
 
 Choose the example you want to run:
 
+#### Option A: Using Arduino IDE
+
 | Example | Arduino Sketch Location |
 |---------|------------------------|
 | LED Brightness | `src/LEDBrightnessControl/MindLEDArduino/MindLEDArduino.ino` |
 | Servo Motor | `src/ServoControl/MindServoArduino/MindServoArduino.ino` |
 | Stepper Motor | `src/StepperMotorControl/MindStepperArduino/MindStepperArduino.ino` |
+
+#### Option B: Using PlatformIO (Recommended)
+
+The `Neurosky_Arduino/` folder contains a PlatformIO project for easier development:
+
+1. Install [PlatformIO IDE](https://platformio.org/install/ide?install=vscode) extension in VS Code
+2. Open the `Neurosky_Arduino/` folder in VS Code
+3. PlatformIO will automatically detect the project
+4. Click **Upload** button in the PlatformIO toolbar (or use `Ctrl+Alt+U`)
+
+| File | Description |
+|------|-------------|
+| `src/main.cpp` | Main LED control code (default) |
+| `test/Led_control.cpp` | LED control test code |
+| `test/servo.cpp` | Servo motor control test code |
+
+To switch between examples, copy the desired test file content to `src/main.cpp`.
 
 1. Open Arduino IDE
 2. Open the appropriate `.ino` file
